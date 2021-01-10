@@ -1,9 +1,17 @@
 baseurl = "/"
-languageCode = "en-us"
-languageLang = "en"
-title = "Homepage"
+languageCode = "fr-fr"
+languageLang = "fr"
+defaultContentLanguage = "fr"
+title = "Ariane | Yoga"
+theme = "hugo-theme-massively"
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
 # https://gohugo.io/getting-started/configuration/#toml-configuration
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[languages]
+# [languages.en]
+#   languageName = "English"
+[languages.fr]
+  languageName = "Français"

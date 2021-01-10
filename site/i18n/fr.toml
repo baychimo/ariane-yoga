@@ -1,0 +1,73 @@
+[CONTACT_ADDRESS]
+  other = "Adresse"
+[CONTACT_EMAIL]
+  other = "Email"
+[CONTACT_FORM_FIELD_EMAIL]
+  other = "Email"
+[CONTACT_FORM_FIELD_MESSAGE]
+  other = "Message"
+[CONTACT_FORM_FIELD_NAME]
+  other = "Nom"
+[CONTACT_FORM_SUBMIT_SEND_MESSAGE]
+  other = "Envoyer"
+[CONTACT_PHONE]
+  other = "Téléphone"
+[CONTACT_SOCIAL]
+  other = "Social"
+[COPYRIGHT_MESSAGE_1]
+  other = "Design: [HTML5 UP](https://html5up.net)"
+[COPYRIGHT_MESSAGE_2]
+  other = "Hugo Port: [curttimson](https://curtistimson.co.uk)"
+[INTRO_CONTINUE]
+  other = "Continuer"
+[NAV_HOME]
+  other = "Accueil"
+[NAV_CONTACT]
+  other = "Contact"
+[PAGINATION_NEXT]
+  other = "Suivant"
+[PAGINATION_PREVIOUS]
+  other = "Précédent"
+
+##############################
+# DATES
+[lastmod_text]
+other = "Modifié le "
+[monday]
+other = "lundi"
+[tuesday]
+other = "mardi"
+[wednesday]
+other = "mercredi"
+[thursday]
+other = "jeudi"
+[friday]
+other = "vendredi"
+[saturday]
+other = "samedi"
+[sunday]
+other = "dimanche"
+[january]
+other = "janvier"
+[february]
+other = "février"
+[march]
+other = "mars"
+[april]
+other = "avril"
+[may]
+other = "mai"
+[june]
+other = "juin"
+[july]
+other = "juillet"
+[august]
+other = "août"
+[september]
+other = "septembre"
+[october]
+other = "octobre"
+[november]
+other = "novembre"
+[december]
+other = "décembre"
