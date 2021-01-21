@@ -7245,6 +7245,13 @@ hugo-bin@^0.67.0:
     rimraf "^3.0.2"
     signale "^1.4.0"
 
+hugo-extended@^0.80.0:
+  version "0.80.0"
+  resolved "https://registry.yarnpkg.com/hugo-extended/-/hugo-extended-0.80.0.tgz#8ce3987733a3c163f055a9a1eea507a96d451b7c"
+  integrity sha512-ayKZ2fSsP0k9KkeNbZNhTBN2om66Ys47AsTTR/0j3CMmpsjoatOtTR4e3kdSFMOEntewIcYazv0WkOYyunEP2Q==
+  dependencies:
+    bin-wrapper "^4.1.0"
+
 human-signals@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-1.1.1.tgz#c5b1cd14f50aeae09ab6c59fe63ba3395fe4dfa3"
@@ -7305,9 +7312,9 @@ immediate@~3.0.5:
   integrity sha1-nbHb0Pr43m++D13V5Wu2BigN5ps=
 
 immer@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/immer/-/immer-8.0.0.tgz#08763549ba9dd7d5e2eb4bec504a8315bd9440c2"
-  integrity sha512-jm87NNBAIG4fHwouilCHIecFXp5rMGkiFrAuhVO685UnMAlOneEAnOyzPt8OnP47TC11q/E7vpzZe0WvwepFTg==
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/immer/-/immer-8.0.1.tgz#9c73db683e2b3975c424fb0572af5889877ae656"
+  integrity sha512-aqXhGP7//Gui2+UrEtvxZxSquQVXTpZ7KDxfCcKAF3Vysvw0CViVaW9RZ1j1xlIYqaaaipBoqdqeibkc18PNvA==
 
 immutable@^3.7.6:
   version "3.8.2"
