@@ -4,13 +4,13 @@ languageLang = "fr"
 defaultContentLanguage = "fr"
 title = "Le Fil d'Ariane | Yoga"
 theme = "hugo-theme-massively"
-[Params]
-  prod_deploy_url = "https://ariane.yoga"
-
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
 # https://gohugo.io/getting-started/configuration/#toml-configuration
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[Params]
+  prod_deploy_url = "https://ariane.yoga"
 
 [markup.goldmark.renderer]
 unsafe= true
