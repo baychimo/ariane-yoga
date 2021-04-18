@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /bloc_atelier/
+Disallow: /merci-pour-votre-email/
+Disallow: /merci-pour-votre-inscription/

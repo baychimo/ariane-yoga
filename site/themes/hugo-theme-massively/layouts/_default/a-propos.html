@@ -1,0 +1,57 @@
+{{ partial "htmlhead" . }}
+	<body lang='{{ .Site.Language.Lang | default "en-us" }}' class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				{{ partial "header" . }}
+				{{ partial "nav" . }}
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<section class="post">
+							<header class="major">
+								{{ if not .Date.IsZero }}
+									{{ $Month := (lower .Date.Month) }}
+									{{ $Day := .Date.Day }}
+									<span class="date">{{ $Day }} {{ title (i18n $Month) }} {{ .Date.Year }}</span>
+								{{ end }}
+								<!-- <h1>{{ .Title }}</h1> -->
+								<img src="/img/ariane_300.jpg" loading="lazy" class="avatar is-loaded" alt="Ariane">
+								<!-- <h1>{{ .Title }}</h1> -->
+								{{ if .Params.quand }}
+									<h6>
+										{{ .Params.quand }}
+										{{ if .Params.ou }}
+											| {{ .Params.ou }}
+										{{ end }}
+									</h6>
+								{{ end }}
+								<p>{{ .Description }}</p>
+							</header>
+							{{ if .Params.image }}
+							<div class="image main"><img src="{{ .Params.image | relURL }}" alt="" /></div>
+							{{ end }}
+							{{ .Content }}
+
+							{{ partial "postcustom" . }}
+							
+							{{ if not (eq .Params.disableComments true) }}
+							{{ template "_internal/disqus.html" . }}
+							{{ end }}
+						</section>
+
+					</div>
+
+					{{ partial "footer/index" . }}
+					{{ partial "copyright" . }}
+
+					<a href="#navPanel" id="navPanelToggle">{{ i18n "NAV_MENU" . }}</a>
+
+			</div>
+			{{ template "_internal/google_analytics.html" . }}
+			{{ partial "scripts/index" . }}
+	</body>
+</html>

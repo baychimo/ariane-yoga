@@ -1,0 +1,37 @@
+<!-- Posts -->
+{{ $data := .siteData }}
+<section class="posts">
+	{{ range .posts.Pages }}
+	<article>
+		<header>
+			{{ if and .CurrentSection .Section }}
+				{{ if not .Date.IsZero }}
+					{{ $Month := (lower .Date.Month) }}
+					{{ $Day := .Date.Day }}
+					<span class="date">{{ $Day }} {{ title (i18n $Month) }} {{ .Date.Year }}</span>
+				{{ end }}
+			{{ end }}
+			<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+			{{ if .Params.quand }}
+				<h6>
+					{{ .Params.quand }}
+					{{ if .Params.ou }}
+						| {{ .Params.ou }}
+					{{ end }}
+				</h6>
+			{{ end }}
+		</header>
+		{{ if .Params.image }}
+		<a href="{{ .Permalink }}" class="image fit"><img src="{{ .Params.image | relURL }}" alt="" /></a>
+		{{ end }}
+		{{ if .Description }}
+		<p>{{ .Description }}</p>
+		{{ else }}
+		<p>{{ .Summary }}</p>
+		{{ end }}
+		<ul class="actions">
+			<li><a href="{{ .Permalink }}" class="button">{{ $data.post.linktext }}</a></li>
+		</ul>
+	</article>
+	{{ end }}
+</section>

@@ -1,0 +1,9 @@
+contactformaction: 'post-action'
+
+address:
+- line: '880 rue de la Réunion'
+- line: 'Nashville, TN 00000-0000'
+
+phone: '(800) 000-0000'
+
+email: 'someone@untitled.tld'

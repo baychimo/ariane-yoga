@@ -1,0 +1,129 @@
+<!-- Footer -->
+{{ $data := index .Site.Data .Site.Language.Lang }}
+<footer id="footer">
+	{{ with $data.contactinfo.contactformaction }}
+	<section>
+		<form name="contact" method="post" action="{{ . }}" netlify-honeypot="mmmiel" data-netlify="true"
+			action="https://ariane.yoga/merci-pour-votre-email/">
+			<h2>Contact</h2>
+			<div class="fields">
+				<div class="field">
+					<label for="name">{{ i18n "CONTACT_FORM_FIELD_NAME" . }}</label>
+					<input type="text" name="name" id="name" />
+				</div>
+				<div class="field">
+					<label for="email">{{ i18n "CONTACT_FORM_FIELD_EMAIL" . }}</label>
+					<input type="text" name="email" id="email" />
+				</div>
+				<div class="field">
+					<label for="message">{{ i18n "CONTACT_FORM_FIELD_MESSAGE" . }}</label>
+					<textarea name="message" id="message" rows="3"></textarea>
+				</div>
+				<div style="display: none;">
+					<label>Do you like honey? <input name="mmmiel" /></label>
+				</div>
+			</div>
+			<ul class="actions">
+				<li><input type="submit" value='{{ i18n "CONTACT_FORM_SUBMIT_SEND_MESSAGE" . }}' /></li>
+			</ul>
+		</form>
+	</section>
+	{{ end }}
+	<section class="split contact">
+		<section id="newsletter">
+			<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+			<form
+				action="https://gmail.us7.list-manage.com/subscribe/post?u=b256a828ee9d45545ab6e0cc0&amp;id=2358652c07"
+				method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+				target="_blank" novalidate>
+				<h2>Newsletter</h2>
+				<div class="fields">
+					<div class="mc-field-group field">
+						<label for="mce-FNAME">Nom </label>
+						<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+					</div>
+					<div class="mc-field-group field">
+						<label for="mce-EMAIL">E-mail <span class="asterisk">*</span>
+						</label>
+						<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+					</div>
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>
+					<div style="position: absolute; left: -5000px;" aria-hidden="true">
+						<input type="text" name="b_b256a828ee9d45545ab6e0cc0_2358652c07" tabindex="-1" value="">
+					</div>
+				</div>
+				<ul class="actions">
+					<li><input type="submit" value="Je m'inscris" name="subscribe" id="mc-embedded-subscribe" class="button"></li>
+				</ul>
+			</form>
+			<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+			<script type='text/javascript'>
+				(function ($) {
+					window.fnames = new Array(); window.ftypes = new Array(); fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[0] = 'EMAIL'; ftypes[0] = 'email';
+					$.extend($.validator.messages, {
+						required: "Ce champ est requis.",
+						remote: "Veuillez remplir ce champ pour continuer.",
+						email: "Veuillez entrer une adresse email valide.",
+						url: "Veuillez entrer une URL valide.",
+						date: "Veuillez entrer une date valide.",
+						dateISO: "Veuillez entrer une date valide (ISO).",
+						number: "Veuillez entrer un nombre valide.",
+						digits: "Veuillez entrer (seulement) une valeur numérique.",
+						creditcard: "Veuillez entrer un numéro de carte de crédit valide.",
+						equalTo: "Veuillez entrer une nouvelle fois la même valeur.",
+						accept: "Veuillez entrer une valeur avec une extension valide.",
+						maxlength: $.validator.format("Veuillez ne pas entrer plus de {0} caractères."),
+						minlength: $.validator.format("Veuillez entrer au moins {0} caractères."),
+						rangelength: $.validator.format("Veuillez entrer entre {0} et {1} caractères."),
+						range: $.validator.format("Veuillez entrer une valeur entre {0} et {1}."),
+						max: $.validator.format("Veuillez entrer une valeur inférieure ou égale à {0}."),
+						min: $.validator.format("Veuillez entrer une valeur supérieure ou égale à {0}.")
+					});
+				}(jQuery)); var $mcj = jQuery.noConflict(true);
+			</script>
+		</section>
+		<section>
+			<h3>{{ i18n "CONTACT_EMAIL" . }}</h3>
+			<p><a
+					href='ma&#105;lto&#58;a&#37;72i&#97;&#110;%65&#46;g%75it&#116;on+%&#55;9&#111;ga&#64;&#103;m&#97;i&#108;%&#50;E&#99;&#111;m'>&#97;riane&#46;&#103;uit&#116;on&#43;yo&#103;a&#64;gmail&#46;co&#109;</a>
+			</p>
+		</section>
+		{{ with $data.social }}
+		<section>
+			<h3>{{ i18n "CONTACT_SOCIAL" . }}</h3>
+			<ul class="icons alt">
+				{{ with .twitter}}
+				<li><a href="{{ . }}" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+				{{ end }}
+				{{ with .facebook}}
+				<li><a href="{{ . }}" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+				{{ end }}
+				{{ with .instagram}}
+				<li><a href="{{ . }}" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+				{{ end }}
+				{{ with .linkedin}}
+				<li><a href="{{ . }}" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				{{ end }}
+				{{ with .github}}
+				<li><a href="{{ . }}" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+				{{ end }}
+				{{ with .youtube}}
+				<li><a href="{{ . }}" class="icon alt fa-youtube"><span class="label">Youtube</span></a></li>
+				{{ end }}
+				{{ with .googleplus}}
+				<li><a href="{{ . }}" class="icon alt fa-google-plus"><span class="label">Google Plus</span></a></li>
+				{{ end }}
+				{{ with .lastfm}}
+				<li><a href="{{ . }}" class="icon alt fa-lastfm"><span class="label">Last.fm</span></a></li>
+				{{ end }}
+				{{ with .flickr}}
+				<li><a href="{{ . }}" class="icon alt fa-flickr"><span class="label">Flickr</span></a></li>
+				{{ end }}
+			</ul>
+		</section>
+		{{ end }}
+	</section>
+</footer>

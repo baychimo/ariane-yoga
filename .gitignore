@@ -1,5 +1,10 @@
 node_modules/
 dist/
 site/data/webpack.json
+site_from_template/
 /npm-debug.log
 yarn-error.log
+*.code-workspace
+dumpt.txt
+# Local Netlify folder
+.netlify
