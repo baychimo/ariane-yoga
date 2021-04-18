@@ -4,6 +4,8 @@ languageLang = "fr"
 defaultContentLanguage = "fr"
 title = "Le Fil d'Ariane | Yoga"
 theme = "hugo-theme-massively"
+[Params]
+  prod_deploy_url = "https://ariane.yoga"
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
